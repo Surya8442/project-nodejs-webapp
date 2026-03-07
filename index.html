@@ -1,62 +1,252 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AutoCare Service</title>
-<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoAssist - Vehicle Services</title>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+font-family: 'Segoe UI', sans-serif;
+margin:0;
+background:#f4f6f9;
+color:#333;
+}
+
+/* Header */
+
+header{
+background:#111;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h2{
+margin:0;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff7a18;
+}
+
+/* Hero Section */
+
+.hero{
+height:80vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+background-size:cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+max-width:600px;
+}
+
+.hero button{
+margin-top:20px;
+padding:15px 35px;
+border:none;
+background:#ff7a18;
+color:white;
+font-size:18px;
+cursor:pointer;
+border-radius:30px;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#ff5100;
+transform:scale(1.05);
+}
+
+/* Services */
+
+.services{
+padding:60px 40px;
+text-align:center;
+}
+
+.services h2{
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:40px;
+color:#ff7a18;
+margin-bottom:15px;
+}
+
+.card button{
+margin-top:15px;
+padding:8px 18px;
+border:none;
+background:#111;
+color:white;
+cursor:pointer;
+border-radius:20px;
+}
+
+/* Features */
+
+.features{
+background:#111;
+color:white;
+padding:50px;
+text-align:center;
+}
+
+.features div{
+margin:15px;
+}
+
+/* Footer */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>🚗 AutoCare Services</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Fuel Delivery</a>
-        <a href="#">Car Repair</a>
-        <a href="#">Bike Repair</a>
-        <a href="#">Spare Parts</a>
-    </nav>
+<h2>🚗 AutoAssist</h2>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
 </header>
 
+
 <section class="hero">
-    <h2>24/7 Vehicle Support</h2>
-    <p>Order petrol, repair vehicles, and buy spare parts instantly.</p>
-    <button>Book Service</button>
+
+<h1>24/7 Vehicle Assistance</h1>
+<p>Order petrol online, repair your car or bike, and buy spare parts instantly.</p>
+
+<button onclick="bookService()">Book Service</button>
+
 </section>
 
+
 <section class="services">
+
+<h2>Our Services</h2>
+
+<div class="grid">
 
 <div class="card">
 <i class="fa-solid fa-gas-pump"></i>
 <h3>Petrol Delivery</h3>
-<p>Order petrol to your location anytime.</p>
+<p>Fuel delivered to your location instantly.</p>
+<button onclick="alert('Fuel delivery requested')">Order</button>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-car"></i>
 <h3>Car Repair</h3>
-<p>Professional mechanics for car problems.</p>
+<p>Professional mechanics for your car.</p>
+<button onclick="alert('Car repair booked')">Book</button>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-motorcycle"></i>
 <h3>Bike Repair</h3>
-<p>Fast repair services for bikes.</p>
+<p>Quick bike repair service anywhere.</p>
+<button onclick="alert('Bike repair booked')">Book</button>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-gears"></i>
 <h3>Spare Parts</h3>
-<p>Order genuine vehicle spare parts.</p>
+<p>Buy genuine spare parts online.</p>
+<button onclick="alert('Opening spare parts shop')">Shop</button>
+</div>
+
 </div>
 
 </section>
 
+
+<section class="features">
+
+<h2>Why Choose Us</h2>
+
+<div>⚡ Fast Service</div>
+<div>📍 Location Based Delivery</div>
+<div>🛠 Expert Mechanics</div>
+<div>💳 Easy Online Booking</div>
+
+</section>
+
+
 <footer>
-<p>© 2026 AutoCare Services</p>
+
+<p>© 2026 AutoAssist | Vehicle Services Platform</p>
+
 </footer>
+
+
+<script>
+
+function bookService(){
+alert("Redirecting to booking service...");
+}
+
+</script>
 
 </body>
 </html>
+```
